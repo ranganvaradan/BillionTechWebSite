@@ -1,0 +1,321 @@
+=== ppt/slides/slide1.xml ===
+PROPOSAL  ·  STRICTLY CONFIDENTIAL
+Flow : Rental &amp; Freight
+Invoice Automation
+Agreement-governed invoice processing for BigBasket — from landlord bill to Oracle Fusion posting, with maker-checker control at every step.
+3,300
+Bills Automated / Month
+1,500
+Rental Locations Governed
+100%
+Agreement-Matched
+Zero
+ERP Team Effort at Go-Live
+NOT A SCANNING TOOL  ·  A CONTRACT-TO-PAYMENT CONTROL PLATFORM  ·  8-WEEK DEPLOYMENT
+billiontech.ai  ·  Prepared for Mr. Pranam R P  ·  July 2026
+
+=== ppt/slides/slide2.xml ===
+Understanding the Requirement  |  What We Heard From You
+Two high-volume, agreement-governed payables streams — each with its own capture problem, its own verification burden, and its own control requirement.
+RENTAL BILLS
+1,500 bills / month
+~1,500 rental locations, each billing monthly
+Landlords submit in different formats and channels — email, PDF, image, hard copy
+Every bill must be checked against the rental agreement
+Escalation clauses must be applied correctly and on time
+Maker verifies · Checker approves — no exceptions
+FREIGHT BILLS
+1,800 bills / month
+~1,800 freight invoices monthly across transporters
+Multi-channel arrival — email, scanned copy, portal upload
+Supporting attachments (LR, POD, weighment) travel with the bill
+Rate validation against contracted freight terms
+Maker verifies · Checker approves — full audit trail
+THE TWO CONSTRAINTS YOU SET — AND HOW THIS PROPOSAL RESPECTS THEM
+Your ERP team is post-go-live and stretched
+Phase 1 ships with secure file upload / download. Zero Oracle Fusion API work required from your side. API posting activates later, on your timeline.
+1,500 agreements must be onboarded fast
+Bulk upload of agreement key data via structured template — single or mass. Agreements become the platform's rule engine, not filing cabinet content.
+BillionTech  ·  billiontech.ai  ·  Strictly Confidential  ·  Proposal for BigBasket  ·  July 2026
+
+=== ppt/slides/slide3.xml ===
+This Is Not a Bill-Scanning Platform  |  It Is a Contract-to-Payment Control System
+Capture is the smallest part of what happens. The value sits in what the platform does after the bill arrives — validate it against the contract, enforce segregation of duties, and post only what is provably correct.
+01
+Agreement as Source of Truth
+Every rental agreement and freight contract is digitised into structured, machine-readable terms — rent, escalation clause, escalation date, lock-in, notice period, tax treatment, rate cards. The agreement becomes an active rule, not a stored PDF.
+02
+Multi-Channel Capture
+Landlords and transporters submit however they already work — email, PDF, scanned image, or the Supplier Portal. AI extracts structured data from any format. No behaviour change is forced on 3,000+ suppliers.
+03
+Automated Validation
+Each bill is auto-matched against its own agreement. Rent amount, escalation applied, period, GST, TDS. Correct bills pass. Deviations are flagged with the reason and the clause they breach — before a human ever sees them.
+04
+Maker–Checker Governance
+Verified bills route to the Maker inbox with the exception already explained. Maker submits; Checker approves. Segregation of duties is enforced by the system, not by convention. Every action is time-stamped and attributable.
+05
+Controlled ERP Posting
+Only fully approved bills reach Oracle Fusion — via file batch in Phase 1, via API when your ERP team is ready. The platform is the control gate; the ERP receives only clean, approved, reconciled data.
+06
+Audit &amp; Intelligence
+Complete audit trail per bill: who captured, who verified, who approved, against which clause. Plus escalation calendars, accrual visibility, exception analytics and landlord/transporter performance.
+Scanning captures an image. This platform enforces a contract.
+BillionTech  ·  billiontech.ai  ·  Strictly Confidential  ·  Proposal for BigBasket  ·  July 2026
+
+=== ppt/slides/slide4.xml ===
+Use Case Flow  |  Rental Bill — Agreement to Oracle Fusion
+1,500 locations, every month. Below is the complete lifecycle of a single rental bill through the platform.
+1
+Agreement Onboarding
+Agreement key data uploaded — single or bulk. Rent, escalation %, escalation date, lock-in, GST/TDS captured as structured rules.
+›
+2
+Invoice Capture
+Landlord emails the bill, uploads on the Supplier Portal, or platform self-bills from the agreement. AI extracts from any format.
+›
+3
+Auto-Validation
+Bill auto-matched to its agreement. Rent, escalation, period, GST/TDS, duplicates checked. Deviations flagged with the clause breached.
+›
+4
+Maker Verification
+Bill lands in Maker inbox with exception reason pre-attached. Reviewed against the agreement side-by-side, then submitted.
+›
+5
+Checker Approval
+Checker sees bill, clause, Maker action and full context. Approve, reject or return. Segregation of duties system-enforced.
+›
+6
+ERP Posting
+Posted to Oracle Fusion. Phase 1: structured file download. Phase 2: direct API. Audit trail sealed.
+Escalation clauses are the hidden risk. The platform tracks every escalation date across 1,500 agreements and applies the increase automatically — so you never overpay on a stale rate, and never underpay into a dispute.
+BillionTech  ·  billiontech.ai  ·  Strictly Confidential  ·  Proposal for BigBasket  ·  July 2026
+
+=== ppt/slides/slide5.xml ===
+Use Case Flow  |  Freight Bill — Submission to Posting
+1,800 bills a month, with supporting documents attached to almost every one. Same control spine; different validation logic.
+1
+Rate Card Onboarding
+Contracted terms loaded per transporter — lane rates, per-kg/per-trip basis, fuel surcharge, detention. Bulk upload supported.
+›
+2
+Multi-Channel Submission
+Transporter emails, scans, or submits on the Portal. LR, POD, weighment and e-way bill captured and bound to the invoice.
+›
+3
+Auto-Validation
+Rate checked against contracted lane rate. Quantity checked against LR/POD. Surcharges, GST, TDS and duplicates verified.
+›
+4
+Maker Verification
+Maker sees invoice, contracted rate, all attachments and the exception reason in one screen. No hunting across folders.
+›
+5
+Checker Approval
+Checker approves with full context and complete document pack. Every decision attributable and time-stamped.
+›
+6
+ERP Posting
+Posted to Oracle Fusion by file batch (Phase 1) or API (Phase 2). Attachments retained for audit retrieval.
+Attachments are first-class objects, not afterthoughts. LR, POD, weighment and e-way bill are bound to the invoice at capture and stay bound through approval, posting and audit retrieval.
+BillionTech  ·  billiontech.ai  ·  Strictly Confidential  ·  Proposal for BigBasket  ·  July 2026
+
+=== ppt/slides/slide6.xml ===
+Scope of Work  |  What Is Included, and What Is Explicitly Not
+Clear boundaries protect both sides. Phase 1 is scoped to deliver value without any dependency on your ERP team.
+IN SCOPE  —  PHASE 1
+Agreement digitisation engine — rental agreements and freight rate cards, single and bulk upload
+Supplier Portal for 3,000+ landlords and transporters — invoice generation and upload
+AI-based multi-channel capture — email, PDF, scan, image; any format
+Automated validation against agreement terms, escalation clauses and rate cards
+Configurable Maker–Checker workflow with segregation of duties enforcement
+Attachment management — LR, POD, weighment, e-way bill bound to invoice
+Exception management, escalation calendar and accrual visibility
+Structured file export for Oracle Fusion (Phase 1) · API posting (Phase 2)
+Complete audit trail, dashboards and MIS reporting
+User training, UAT support and hypercare through go-live
+NOT IN SCOPE
+Oracle Fusion internal configuration or customisation
+Payment execution or bank integration (platform posts; ERP pays)
+Migration of historical invoices prior to go-live
+Physical document storage or archival scanning services
+Statutory filing or tax return preparation
+Change to BigBasket's existing approval authority matrix
+Phase 2 (API posting to Oracle Fusion) is included at no additional cost — activated whenever your ERP team has bandwidth.
+BillionTech  ·  billiontech.ai  ·  Strictly Confidential  ·  Proposal for BigBasket  ·  July 2026
+
+=== ppt/slides/slide7.xml ===
+Security, Compliance &amp; Data Governance
+Rental agreements and freight contracts are commercially sensitive. Our controls posture, and our certification roadmap, are set out transparently below.
+SOC 2 — CERTIFICATION IN PROGRESS
+BillionTech is currently undergoing SOC 2 certification, which we expect to complete within the next 2–3 months. We are stating this openly rather than after the fact: at the point of signing this engagement, certification will be in progress, not concluded. We will share the audit report with BigBasket as soon as it is issued, and we are willing to make that delivery a contractual commitment.
+Expected completion
+Q3 / Q4 2026
+Report shared on issue
+Data Protection
+Encryption in transit (TLS 1.2+) and at rest. Rental agreements, freight contracts and invoice attachments encrypted in storage. Tenant data logically segregated.
+Access Control
+Role-based access with least-privilege defaults. Maker, Checker and Administrator roles strictly separated. Multi-factor authentication supported for all users.
+Audit &amp; Traceability
+Immutable, time-stamped audit log of every action — capture, verification, approval, posting. Attributable to a named user. Exportable for internal and statutory audit.
+Availability &amp; Continuity
+Hosted on enterprise cloud infrastructure with automated backup, disaster recovery and defined RPO/RTO. Availability commitments set out in the SLA.
+Regulatory Alignment
+Built for Indian statutory requirements — GST, TDS and e-invoicing treatment embedded in validation. Data residency within India.
+Proven at Scale
+7,00,000+ invoices and ₹5,700 Cr+ processed in live production across corporate anchors and regulated lending partners over eight years.
+Controls above are in force today. SOC 2 formalises and independently attests them — it is not the point at which they begin.
+BillionTech  ·  billiontech.ai  ·  Strictly Confidential  ·  Proposal for BigBasket  ·  July 2026
+
+=== ppt/slides/slide8.xml ===
+Commercial Options  |  Two Structures, One Platform
+Identical platform, scope and support in both options. They differ only in how usage is metered. One-time and recurring costs are shown separately.
+ONE-TIME  ·  COMMON TO BOTH OPTIONS
+Implementation &amp; Onboarding
+Includes agreement digitisation setup, bulk upload of 1,500 rental agreements, freight rate cards, Maker–Checker configuration, UAT and go-live hypercare.
+₹ 3,00,000
+OPTION A  ·  PER-BILL
+RECURRING  —  MONTHLY
+Processing fee
+₹75 per bill
+Est. volume
+3,300 bills / month
+Processing charge
+₹2,47,500
+Minimum monthly billing
+₹2,00,000
+Hosting fee
+₹25,000
+Est. Monthly Recurring
+₹ 2,72,500
+OPTION B  ·  PER-SUPPLIER
+RECURRING  —  MONTHLY
+Subscription fee
+₹75 per supplier
+Est. supplier base
+3,000 suppliers
+Subscription charge
+₹2,25,000
+Minimum monthly billing
+₹2,00,000
+Hosting fee
+₹25,000
+Est. Monthly Recurring
+₹ 2,50,000
+Minimum monthly billing of ₹2,00,000 applies to the processing / subscription charge (hosting is additional).  Where actual usage exceeds the minimum, actual usage is billed.  All figures exclude GST.  Implementation billed 50% on signing, 50% on go-live.
+BillionTech  ·  billiontech.ai  ·  Strictly Confidential  ·  Proposal for BigBasket  ·  July 2026
+
+=== ppt/slides/slide9.xml ===
+Deployment Plan  |  8 Weeks to Live Processing — With No ERP Dependency
+Phase 1 goes live on file-based posting. Nothing in this plan requires bandwidth from your Oracle Fusion team.
+Phase 1  ·  Weeks 1–3
+Foundation &amp; Agreement Onboarding
+Platform provisioning, environment setup and security review
+Agreement template design — rental terms and freight rate cards
+Bulk upload of 1,500 rental agreement key data records
+Freight rate card onboarding per transporter
+Maker–Checker roles, approval matrix and user provisioning
+Exit: all 1,500 agreements live as active rules on the platform
+Phase 2  ·  Weeks 3–6
+Capture, Validation &amp; Supplier Portal
+Supplier Portal activation and landlord/transporter onboarding
+Email and scan capture channels configured and tested
+AI extraction tuned to your actual bill formats
+Validation rules live — escalation, rate, GST, TDS, duplicates
+Attachment binding (LR, POD, weighment) configured
+Exit: bills flowing into Maker inbox, auto-validated
+Phase 3  ·  Weeks 6–8
+Go-Live, File Posting &amp; Hypercare
+UAT with your finance team on live rental and freight bills
+Oracle Fusion file export format finalised and validated
+Parallel run — platform output vs current manual process
+Go-live with full Maker–Checker on both streams
+Hypercare, dashboards and MIS handover
+Exit: 3,300 bills / month processed under full control
+Phase 4 (optional, post go-live):  Direct API posting to Oracle Fusion — activated on your ERP team's timeline, at no additional cost.
+SOC 2 certification is expected to conclude within 2–3 months — broadly in parallel with this deployment. The audit report will be shared with BigBasket on issue.
+BillionTech  ·  billiontech.ai  ·  Strictly Confidential  ·  Proposal for BigBasket  ·  July 2026
+
+=== ppt/slides/slide10.xml ===
+The Value  |  What Changes for BigBasket on Day One
+The return is not only processing effort. It is control, accuracy and the elimination of silent leakage across 1,500 agreements.
+Rental Leakage Stops
+Across 1,500 agreements, missed escalations and stale rates cause silent overpayment and underpayment. The platform applies every clause on its due date, automatically. This alone typically pays for the system.
+Effort Collapses
+3,300 bills a month currently consume a large manual verification burden. With 80%+ auto-validating clean, your team touches only genuine exceptions — with the reason already explained.
+Control Is Provable
+Maker–Checker enforced by system, not convention. Every bill carries who captured it, who verified it, who approved it, and against which contractual clause. Audit becomes a query, not a project.
+Suppliers Don't Change
+3,000+ landlords and transporters keep working the way they already do — email, scan, or portal, their choice. Adoption risk is near zero because no behaviour change is imposed on them.
+ERP Stays Untouched
+Your Oracle Fusion team, fresh off implementation, does nothing in Phase 1. The platform delivers a clean, validated file. API integration waits until they have bandwidth.
+Scales Without Headcount
+New rental locations and new transporters onboard as data, not as hiring. The platform absorbs volume growth — 1,500 locations or 5,000 — without a proportional increase in AP staff.
+The question is not whether 3,300 bills can be processed faster. It is whether every one of them can be proven correct against its contract.
+BillionTech  ·  billiontech.ai  ·  Strictly Confidential  ·  Proposal for BigBasket  ·  July 2026
+
+=== ppt/slides/slide11.xml ===
+Our Numbers Speak For Us  |  ₹5,700 Cr+ Processed Across 7,00,000+ Invoices
+BillionTech is not a first deployment. The platform runs at enterprise scale today — currently processing over 47,000 invoices in a single month.
+CUMULATIVE VALUE PROCESSED  (₹ Cr)
+KEY METRICS
+₹5,785 Cr
+Total Value Processed
+7,01,000+
+Invoices Processed
+47,000+
+Invoices in a Single Month
+₹2,550 Cr
+Trailing 12-Month Run Rate
+4,28,000+
+Invoices in Last 12 Months
+5 Years
+In Live Production
+Volume has grown ~9x in three years — the platform scales without adding headcount
+Figures as at July 2026, based on live platform transaction records. Cumulative chart shown at quarter-ends.
+BillionTech  ·  billiontech.ai  ·  Strictly Confidential  ·  Proposal for BigBasket  ·  July 2026
+
+=== ppt/slides/slide12.xml ===
+Leadership  |  A Passionate and Experienced Management Team
+Deep domain experience across financial services, technology, risk and enterprise transformation.
+Rangan V
+Chief Executive Officer
+Serial entrepreneur, 30+ years in consulting and financial services. Co-founder of MicroGram (NBFC-P2P lending) and Beyond Square. Former Head of Banking &amp; Capital Markets Domain, Infosys. PhD in Finance and Economics; Member of ICAI and ICWA.
+Bala KV
+Chairman (Non-Executive)
+30 years at Infosys, including CFO from 2006 to 2012. Significant experience in corporate finance, international taxation, risk management and mergers &amp; acquisitions. Member of ICAI, ICSI and ICWA.
+Alwyn Vaz
+Senior Business Analyst
+20+ years' experience in bridging business needs and technology solutions. Skilled in requirements gathering, stakeholder management and process optimization that improve operational efficiency and business outcomes.
+Mohit C
+Chief Risk Officer
+25+ years in risk management, banking and consulting. Responsible for controls framework, compliance and governance across all platform deployments.
+Ramakrishnan V
+Advisor
+25+ years in BFSI, principally in lending across products and customer segments. Leads enterprise engagement and commercial strategy.
+Saseendran K
+Head — Partnerships
+20+ years of techno-functional experience in banking and financial services. Leads ecosystem partnerships and integration alliances.
+The same team that built and scaled a ₹5,700 Cr+ transaction platform will deliver this engagement.
+BillionTech  ·  billiontech.ai  ·  Strictly Confidential  ·  Proposal for BigBasket  ·  July 2026
+
+=== ppt/slides/slide13.xml ===
+Agreement-governed.
+Maker-checker controlled.
+ERP-ready.
+BillionTech Flow turns 3,300 monthly bills from a verification burden into a controlled, auditable, contract-enforced process — without touching your ERP or asking 3,000 suppliers to change how they work.
+WHAT WE PROPOSE NEXT
+1
+Confirm commercial option
+Select Option A or Option B; we issue the formal SOW and agreement for signature.
+2
+Agreement template workshop
+Half-day session to finalise the rental and freight data templates for bulk upload.
+3
+Security &amp; compliance review
+Your InfoSec team reviews our controls posture. SOC 2 report shared on issue, as a contractual commitment.
+4
+Kick-off — Week 1
+Environment provisioning, agreement template workshop and project governance established.
+Rangan Varadan  ·  Co-founder &amp; Director  ·  +91 99801 30240  ·  rangan@billiontech.ai
+billiontech.ai  ·  Strictly Confidential  ·  July 2026
