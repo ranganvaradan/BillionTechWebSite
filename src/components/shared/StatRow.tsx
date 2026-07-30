@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import { colors } from '@/theme/tokens';
+import { CountUpStatValue } from '@/components/shared/CountUpStatValue';
 
 export interface StatItem {
   value: string;
@@ -9,9 +10,11 @@ export interface StatItem {
 interface StatRowProps {
   stats: readonly StatItem[];
   variant?: 'light' | 'dark' | 'tint';
+  /** When true, numeric values count up on first scroll into view. */
+  animate?: boolean;
 }
 
-export function StatRow({ stats, variant = 'light' }: StatRowProps) {
+export function StatRow({ stats, variant = 'light', animate = false }: StatRowProps) {
   const bg =
     variant === 'dark' ? colors.gray900 : variant === 'tint' ? colors.primaryLight : colors.gray50;
   const valueColor = variant === 'dark' ? colors.white : colors.gray900;
@@ -38,21 +41,28 @@ export function StatRow({ stats, variant = 'light' }: StatRowProps) {
             px: 2,
             borderRight: {
               xs: 'none',
-              md: i < stats.length - 1 ? `1px solid ${variant === 'dark' ? 'rgba(255,255,255,0.12)' : colors.gray200}` : 'none',
+              md:
+                i < stats.length - 1
+                  ? `1px solid ${variant === 'dark' ? 'rgba(255,255,255,0.12)' : colors.gray200}`
+                  : 'none',
             },
           }}
         >
-          <Typography
-            sx={{
-              fontFamily: (t) => t.typography.h1.fontFamily,
-              fontWeight: 700,
-              fontSize: { xs: '1.5rem', md: '1.85rem' },
-              color: valueColor,
-              mb: 0.75,
-            }}
-          >
-            {stat.value}
-          </Typography>
+          {animate ? (
+            <CountUpStatValue value={stat.value} color={valueColor} />
+          ) : (
+            <Typography
+              sx={{
+                fontFamily: (t) => t.typography.h1.fontFamily,
+                fontWeight: 700,
+                fontSize: { xs: '1.5rem', md: '1.85rem' },
+                color: valueColor,
+                mb: 0.75,
+              }}
+            >
+              {stat.value}
+            </Typography>
+          )}
           <Typography variant="body2" sx={{ color: labelColor, maxWidth: 220, mx: 'auto', lineHeight: 1.45 }}>
             {stat.label}
           </Typography>

@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import type { ReactNode } from 'react';
+import { forwardRef, type ReactNode } from 'react';
 import { colors } from '@/theme/tokens';
 
 interface SectionHeadingProps {
@@ -64,7 +64,10 @@ interface SectionProps {
   py?: object | number;
 }
 
-export function Section({ children, id, bg = 'white', py }: SectionProps) {
+export const Section = forwardRef<HTMLElement, SectionProps>(function Section(
+  { children, id, bg = 'white', py },
+  ref,
+) {
   const bgMap = {
     white: colors.white,
     light: colors.gray50,
@@ -74,6 +77,7 @@ export function Section({ children, id, bg = 'white', py }: SectionProps) {
 
   return (
     <Box
+      ref={ref}
       id={id}
       component="section"
       sx={{
@@ -84,4 +88,4 @@ export function Section({ children, id, bg = 'white', py }: SectionProps) {
       {children}
     </Box>
   );
-}
+});
