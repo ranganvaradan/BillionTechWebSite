@@ -1,4 +1,5 @@
-import { Box, Button, Chip, Container, Stack, Typography } from '@mui/material';
+import { lazy, Suspense } from 'react';
+import { Box, Button, Chip, CircularProgress, Container, Stack, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import type { Product } from '@/data/products';
 import { getCaseStudyById } from '@/data/caseStudies';
@@ -15,6 +16,8 @@ import { Section, SectionHeading } from '@/components/shared/SectionHeading';
 import { StatRow } from '@/components/shared/StatRow';
 import { WorkflowDiagram } from '@/components/shared/WorkflowDiagram';
 import { colors } from '@/theme/tokens';
+
+const FlowP2pProductVisuals = lazy(() => import('@/components/flow/FlowP2pProductVisuals'));
 
 interface ProductPageTemplateProps {
   product: Product;
@@ -267,17 +270,29 @@ export function ProductPageTemplate({ product }: ProductPageTemplateProps) {
                   title={sections.aiTitle}
                   subtitle={sections.aiSubtitle}
                 />
-                <Box
-                  sx={{
-                    display: 'grid',
-                    gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: 'repeat(3, 1fr)' },
-                    gap: 2.5,
-                  }}
-                >
-                  {product.aiAgents.map((agent, i) => (
-                    <AIAgentCard key={agent.name} agent={agent} index={i + 1} />
-                  ))}
-                </Box>
+                {product.id === 'flow-p2p' ? (
+                  <Suspense
+                    fallback={
+                      <Box sx={{ display: 'flex', justifyContent: 'center', py: 6 }}>
+                        <CircularProgress color="primary" size={32} aria-label="Loading P2P visuals" />
+                      </Box>
+                    }
+                  >
+                    <FlowP2pProductVisuals agents={product.aiAgents} />
+                  </Suspense>
+                ) : (
+                  <Box
+                    sx={{
+                      display: 'grid',
+                      gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: 'repeat(3, 1fr)' },
+                      gap: 2.5,
+                    }}
+                  >
+                    {product.aiAgents.map((agent, i) => (
+                      <AIAgentCard key={agent.name} agent={agent} index={i + 1} />
+                    ))}
+                  </Box>
+                )}
                 {sections.guardrail && <GuardrailPanel statement={sections.guardrail} />}
               </Container>
             </Section>

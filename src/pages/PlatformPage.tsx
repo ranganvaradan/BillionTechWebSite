@@ -6,8 +6,9 @@ import { PlatformPageTemplate } from '@/components/platform/PlatformPageTemplate
 import { colors } from '@/theme/tokens';
 
 const FinancePlatformPage = lazy(() => import('@/pages/FinancePlatformPage'));
+const FlowPlatformPage = lazy(() => import('@/pages/FlowPlatformPage'));
 
-function FinanceFallback() {
+function PlatformFallback({ label }: { label: string }) {
   return (
     <Box
       sx={{
@@ -18,7 +19,7 @@ function FinanceFallback() {
         backgroundColor: colors.gray900,
       }}
     >
-      <CircularProgress color="primary" size={36} aria-label="Loading Finance platform page" />
+      <CircularProgress color="primary" size={36} aria-label={`Loading ${label} platform page`} />
     </Box>
   );
 }
@@ -33,8 +34,16 @@ export function PlatformPage() {
 
   if (platform.slug === 'finance') {
     return (
-      <Suspense fallback={<FinanceFallback />}>
+      <Suspense fallback={<PlatformFallback label="Finance" />}>
         <FinancePlatformPage platform={platform} />
+      </Suspense>
+    );
+  }
+
+  if (platform.slug === 'flow') {
+    return (
+      <Suspense fallback={<PlatformFallback label="Flow" />}>
+        <FlowPlatformPage platform={platform} />
       </Suspense>
     );
   }

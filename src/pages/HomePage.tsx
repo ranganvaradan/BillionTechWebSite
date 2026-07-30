@@ -8,6 +8,7 @@ import {
   homepageProofStats,
   homepageSegments,
 } from '@/data/navigation';
+import { TrustedByBand } from '@/components/home/TrustedByBand';
 import { ProductCard } from '@/components/shared/ProductCard';
 import { Section, SectionHeading } from '@/components/shared/SectionHeading';
 import { StatRow } from '@/components/shared/StatRow';
@@ -92,10 +93,12 @@ export function HomePage() {
         </Container>
       </Section>
 
+      <TrustedByBand />
+
       {/* Proof Strip */}
       <Section bg="light" py={{ xs: 4, md: 5 }} id="proof-strip">
         <Container maxWidth="lg">
-          <StatRow stats={[...homepageProofStats]} />
+          <StatRow stats={[...homepageProofStats]} animate />
         </Container>
       </Section>
 
