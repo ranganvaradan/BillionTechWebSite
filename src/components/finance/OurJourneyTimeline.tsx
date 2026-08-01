@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
+import { clientDescriptors } from '@/data/clients';
 import { colors } from '@/theme/tokens';
 import { usePrefersReducedMotion } from '@/hooks/usePrefersReducedMotion';
 
@@ -9,11 +10,11 @@ export interface JourneyMilestone {
   detail: string;
 }
 
-/** Real SCF / Finance milestones — do not invent or alter. */
+/** Real SCF / LEND milestones — do not invent or alter. */
 export const financeJourneyMilestones: JourneyMilestone[] = [
   {
     era: 'FY2020',
-    title: 'Sundaram Finance exclusive SCF partnership begins',
+    title: `${clientDescriptors.sundaramFinance} exclusive SCF partnership begins`,
     detail: 'Production deployment',
   },
   {
@@ -22,14 +23,14 @@ export const financeJourneyMilestones: JourneyMilestone[] = [
     detail: '25 corporate programmes, 28+ dealers',
   },
   {
-    era: 'Live',
-    title: 'ICICI Bank SCF portfolio live',
-    detail: 'Institutional SCF in production',
+    era: 'Expansion',
+    title: 'Support for Digital Lending',
+    detail: 'Platform extending from SCF into end-to-end digital lending capability',
   },
   {
-    era: 'Live',
-    title: 'TATA Capital SCF portfolio live',
-    detail: 'Institutional SCF in production',
+    era: 'Platform',
+    title: 'Added Loan Origination Capabilities',
+    detail: 'LOS / AI-LOS product coming online',
   },
   {
     era: 'Today',
@@ -80,7 +81,7 @@ export function OurJourneyTimeline({
           From exclusive SCF partner to multi-anchor scale
         </Typography>
         <Typography sx={{ color: colors.gray200, mb: { xs: 4, md: 5 }, maxWidth: 560 }}>
-          Real milestones from live BillionTech Finance deployments — not a projection roadmap.
+          Real milestones from live BillionTech LEND deployments — not a projection roadmap.
         </Typography>
 
         <Box sx={{ position: 'relative', pl: '36px' }}>

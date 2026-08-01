@@ -19,7 +19,7 @@ const productOptions = [
   'Flow P2P',
   'Flow O2C',
   'SCF',
-  'BillionTech Lend',
+  'Loan Origination System',
   'Multiple',
 ] as const;
 
@@ -108,7 +108,8 @@ export function ContactForm() {
         <Typography sx={{ fontWeight: 700, mb: 0.5 }}>Thank you — we received your details.</Typography>
         <Typography variant="body2">
           No live submission in v1. In development, your message is logged locally only. You can also
-          reach {companyContact.name} at {companyContact.email} or {companyContact.phone}.
+          reach {companyContact.name} at {companyContact.email}
+          {companyContact.phone ? ` or ${companyContact.phone}` : ''}.
         </Typography>
       </Alert>
     );

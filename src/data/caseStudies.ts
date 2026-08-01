@@ -1,3 +1,5 @@
+import { clientDescriptors } from './clients';
+
 export interface CaseStudy {
   id: string;
   name: string;
@@ -12,12 +14,12 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     id: 'p2p-pilots',
-    name: '3 Paying P2P Pilots',
+    name: 'Manufacturing & FMCG P2P programmes',
     product: 'Flow P2P',
     summary:
       'Manufacturing and FMCG pilots live on Flow P2P — paying customers validating the full RFQ-to-payment cycle with AI agents and job-work visibility.',
     metrics: [
-      { value: '3', label: 'Paying pilots' },
+      { value: '3', label: 'Pilot programmes' },
       { value: '60–70%', label: 'Procurement cycle time reduction (reported)' },
       { value: '80%+', label: 'Invoices auto-matched' },
     ],
@@ -25,10 +27,10 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 'ttk-prestige',
-    name: 'TTK Prestige',
+    name: clientDescriptors.ttkPrestige,
     product: 'Flow O2C',
     summary:
-      '₹3,000 Cr manufacturer with 3,500+ distributors — full network live on Flow O2C for invoice-to-cash automation.',
+      'Leading manufacturer with 3,500+ distributors — full network live on Flow O2C for invoice-to-cash automation.',
     metrics: [
       { value: '₹3,000 Cr', label: 'Manufacturer revenue scale' },
       { value: '3,500+', label: 'Distributors live on O2C' },
@@ -41,7 +43,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 'sundaram-finance',
-    name: 'Sundaram Finance',
+    name: clientDescriptors.sundaramFinance,
     product: 'SCF',
     summary:
       'Exclusive SCF partner since FY2020 — 25 corporate programmes and 28+ dealers live on the BillionTech platform.',
@@ -50,18 +52,18 @@ export const caseStudies: CaseStudy[] = [
       { value: '28+', label: 'Dealers' },
       { value: 'FY2020', label: 'Live since' },
     ],
-    note: 'ICICI Bank and TATA Capital SCF portfolios are also live — shown as partner cards on the SCF product page.',
+    note: 'Additional SCF portfolios with leading banks and NBFCs are also live on the platform.',
   },
   {
     id: 'icici-bank',
-    name: 'ICICI Bank',
+    name: clientDescriptors.iciciBank,
     product: 'SCF',
     summary: 'SCF portfolio live on the BillionTech platform.',
     metrics: [{ value: 'LIVE', label: 'SCF portfolio' }],
   },
   {
     id: 'tata-capital',
-    name: 'TATA Capital',
+    name: clientDescriptors.tataCapital,
     product: 'SCF',
     summary: 'SCF portfolio live on the BillionTech platform.',
     metrics: [{ value: 'LIVE', label: 'SCF portfolio' }],

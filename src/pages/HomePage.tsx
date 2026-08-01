@@ -46,7 +46,7 @@ export function HomePage() {
                   letterSpacing: '-0.02em',
                 }}
               >
-                The Operating System for India&apos;s Supply Chain &amp; Lending
+                The Operating System for Enterprise Supply Chains
               </Typography>
               <Typography
                 sx={{
@@ -57,8 +57,8 @@ export function HomePage() {
                   maxWidth: 520,
                 }}
               >
-                Two platforms, four battle-tested products. Every deployment in 6–7 weeks — no ERP
-                changes.
+                2 inter-connected platforms, 4 battle-tested solutions. Every deployment in 6–7
+                weeks — no ERP changes.
               </Typography>
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
                 <Button
@@ -108,7 +108,7 @@ export function HomePage() {
           <SectionHeading
             eyebrow="The challenge"
             title="The Problem We Solve"
-            subtitle="Operational gaps that CFOs, CPOs, and Heads of Credit face across India's supply chain and lending — amplified by RBI DLD 2025, DPDP Act, and Account Aggregator pressure."
+            subtitle="Operational gaps that CFOs, CPOs, and Heads of Credit face across India's supply chain and lending — amplified by RBI's Digital Lending Guidelines, DPDP Act, and Account Aggregator pressure."
           />
           <Box
             sx={{
@@ -144,7 +144,7 @@ export function HomePage() {
           <SectionHeading
             eyebrow="Platforms"
             title="Two Platforms, Four Products"
-            subtitle="BillionTech Flow covers procurement and receivables. BillionTech Finance covers embedded working capital and digital lending — live with named institutional customers."
+            subtitle="BillionTech Flow covers procurement and receivables. BillionTech LEND covers embedded working capital and digital lending."
           />
           <Stack spacing={5}>
             {platforms.map((platform) => {
@@ -260,8 +260,8 @@ export function HomePage() {
         <Container maxWidth="lg">
           <SectionHeading
             eyebrow="In production"
-            title="Proof — Live Deployments"
-            subtitle="Named institutional customers and programmes already running on the platform."
+            title="Who We Work With — Live Deployments"
+            subtitle="Anonymized institutional programmes already running on the platform."
           />
           <Box
             sx={{
@@ -292,7 +292,7 @@ export function HomePage() {
             variant="text"
             sx={{ mt: 3, color: colors.primaryHover, fontWeight: 600 }}
           >
-            View all proof & case studies →
+            View credentials →
           </Button>
         </Container>
       </Section>

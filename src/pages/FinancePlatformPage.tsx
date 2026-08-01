@@ -29,10 +29,7 @@ export default function FinancePlatformPage({ platform }: FinancePlatformPagePro
               display: 'grid',
               gridTemplateColumns: { xs: '1fr', md: '1.05fr 0.95fr' },
               gap: { xs: 5, md: 6 },
-              alignItems: 'start',
-              // Tall enough that sticky diagram can stay framed while scrollY reaches ~400–500
-              minHeight: { md: '115vh' },
-              pb: { md: 8 },
+              alignItems: 'center',
             }}
           >
             <Box>
@@ -80,15 +77,7 @@ export default function FinancePlatformPage({ platform }: FinancePlatformPagePro
                 Request a Demo
               </Button>
             </Box>
-            <Box
-              sx={{
-                position: { md: 'sticky' },
-                top: { md: 96 },
-                alignSelf: 'start',
-              }}
-            >
-              <MoneyFlowHero scrollTargetRef={heroScrollRef} />
-            </Box>
+            <MoneyFlowHero scrollTargetRef={heroScrollRef} />
           </Box>
         </Container>
       </Section>

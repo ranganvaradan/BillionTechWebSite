@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import { colors } from '@/theme/tokens';
 
 /**
- * Hero system diagram — two platform clusters (Flow / Finance) into BillionTech,
+ * Hero system diagram — two platform clusters (Flow / LEND) into BillionTech,
  * with links out to ERP / Suppliers / Distributors / Banks & NBFCs.
  */
 export function SystemDiagram() {
@@ -12,8 +12,8 @@ export function SystemDiagram() {
   ];
 
   const financeProducts = [
-    { label: 'SCF', x: 78, y: 34 },
-    { label: 'BillionTech Lend', x: 78, y: 52 },
+    { label: 'SCF', x: 78, y: 34, fontSize: 2.4 },
+    { label: 'Loan Origination System', x: 78, y: 52, fontSize: 1.9, width: 30 },
   ];
 
   const allProducts = [...flowProducts, ...financeProducts];
@@ -25,36 +25,45 @@ export function SystemDiagram() {
     { label: 'Banks & NBFCs', x: 50, y: 94 },
   ];
 
-  const renderProduct = (n: { label: string; x: number; y: number }) => (
-    <g key={n.label}>
-      <rect
-        x={n.x - 13}
-        y={n.y - 5}
-        width="26"
-        height="10"
-        rx="1.4"
-        fill={colors.white}
-        stroke={colors.primary}
-        strokeWidth="0.55"
-      />
-      <text
-        x={n.x}
-        y={n.y + 1.2}
-        textAnchor="middle"
-        fill={colors.gray900}
-        fontSize="2.4"
-        fontWeight="600"
-        fontFamily="Inter, sans-serif"
-      >
-        {n.label}
-      </text>
-    </g>
-  );
+  const renderProduct = (n: {
+    label: string;
+    x: number;
+    y: number;
+    fontSize?: number;
+    width?: number;
+  }) => {
+    const boxWidth = n.width ?? 26;
+    return (
+      <g key={n.label}>
+        <rect
+          x={n.x - boxWidth / 2}
+          y={n.y - 5}
+          width={boxWidth}
+          height="10"
+          rx="1.4"
+          fill={colors.white}
+          stroke={colors.primary}
+          strokeWidth="0.55"
+        />
+        <text
+          x={n.x}
+          y={n.y + 1.2}
+          textAnchor="middle"
+          fill={colors.gray900}
+          fontSize={String(n.fontSize ?? 2.4)}
+          fontWeight="600"
+          fontFamily="Inter, sans-serif"
+        >
+          {n.label}
+        </text>
+      </g>
+    );
+  };
 
   return (
     <Box
       role="img"
-      aria-label="System diagram: BillionTech Flow (Flow P2P, Flow O2C) and BillionTech Finance (SCF, BillionTech Lend) connecting to BillionTech, with links to ERP, Suppliers, Distributors, and Banks & NBFCs"
+      aria-label="System diagram: BillionTech Flow (Flow P2P, Flow O2C) and BillionTech LEND (SCF, Loan Origination System) connecting to BillionTech, with links to ERP, Suppliers, Distributors, and Banks & NBFCs"
       sx={{
         width: '100%',
         maxWidth: 560,
@@ -108,7 +117,7 @@ export function SystemDiagram() {
           fontWeight="700"
           fontFamily="Plus Jakarta Sans, Inter, sans-serif"
         >
-          BillionTech Finance
+          BillionTech LEND
         </text>
 
         {allProducts.map((n) => (

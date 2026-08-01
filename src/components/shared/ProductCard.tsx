@@ -24,17 +24,19 @@ export function ProductCard({ product }: ProductCardProps) {
         <Typography variant="h5" sx={{ fontSize: '1.25rem' }}>
           {product.name}
         </Typography>
-        <Chip
-          label={product.statusBadge}
-          size="small"
-          sx={{
-            height: 22,
-            fontSize: '0.7rem',
-            fontWeight: 600,
-                            backgroundColor: colors.primaryLight,
-                            color: colors.gray900,
-          }}
-        />
+        {product.statusBadge ? (
+          <Chip
+            label={product.statusBadge}
+            size="small"
+            sx={{
+              height: 22,
+              fontSize: '0.7rem',
+              fontWeight: 600,
+              backgroundColor: colors.primaryLight,
+              color: colors.gray900,
+            }}
+          />
+        ) : null}
       </Stack>
 
       <Typography variant="body2" sx={{ color: colors.gray500, mb: 2, flexGrow: 0 }}>

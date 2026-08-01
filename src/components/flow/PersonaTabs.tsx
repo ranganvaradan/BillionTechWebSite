@@ -1,6 +1,7 @@
 import { useState, type ReactNode, type SyntheticEvent } from 'react';
 import { Box, Button, Tab, Tabs, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
+import { clientDescriptors } from '@/data/clients';
 import { colors } from '@/theme/tokens';
 import { RfqPipelineMockup } from './RfqPipelineMockup';
 import { ThreeWayMatchMockup } from './ThreeWayMatchMockup';
@@ -73,7 +74,7 @@ const personaTabs: PersonaTab[] = [
       'Distributor self-service portal',
       'Open-item sync for distributors and finance',
       'Credit and debit note handling',
-      'Visibility across 3,500+ distributors (TTK Prestige network)',
+      `Visibility across 3,500+ distributors (${clientDescriptors.ttkPrestige} network)`,
     ],
     statValue: '3,500+',
     statLabel: 'Distributors on platform',

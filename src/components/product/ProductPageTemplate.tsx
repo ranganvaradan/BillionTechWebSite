@@ -2,14 +2,10 @@ import { lazy, Suspense } from 'react';
 import { Box, Button, Chip, CircularProgress, Container, Stack, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import type { Product } from '@/data/products';
-import { getCaseStudyById } from '@/data/caseStudies';
 import { AIAgentCard } from '@/components/shared/AIAgentCard';
 import { CapabilityGroupBlock } from '@/components/shared/CapabilityGroup';
-import { CaseStudyCard } from '@/components/shared/CaseStudyCard';
-import { CompetitiveTable } from '@/components/shared/CompetitiveTable';
 import { CTASection } from '@/components/shared/CTASection';
 import { GuardrailPanel } from '@/components/shared/GuardrailPanel';
-import { PartnerCard } from '@/components/shared/PartnerCard';
 import { ProductLayerCard } from '@/components/shared/ProductLayerCard';
 import { RiskScoreVisual } from '@/components/shared/RiskScoreVisual';
 import { Section, SectionHeading } from '@/components/shared/SectionHeading';
@@ -24,7 +20,6 @@ interface ProductPageTemplateProps {
 }
 
 export function ProductPageTemplate({ product }: ProductPageTemplateProps) {
-  const caseStudy = product.caseStudyRef ? getCaseStudyById(product.caseStudyRef) : undefined;
   const sections = product.sections;
   const heroCallout = sections?.heroCallout;
 
@@ -33,17 +28,19 @@ export function ProductPageTemplate({ product }: ProductPageTemplateProps) {
       {/* 1. Hero */}
       <Section bg="dark" py={{ xs: 7, md: 9 }}>
         <Container maxWidth="lg">
-          <Chip
-            label={product.statusBadge}
-            size="small"
-            sx={{
-              mb: 2,
-              height: 26,
-              fontWeight: 600,
-              backgroundColor: colors.primaryLight,
-              color: colors.gray900,
-            }}
-          />
+          {product.statusBadge ? (
+            <Chip
+              label={product.statusBadge}
+              size="small"
+              sx={{
+                mb: 2,
+                height: 26,
+                fontWeight: 600,
+                backgroundColor: colors.primaryLight,
+                color: colors.gray900,
+              }}
+            />
+          ) : null}
           <Typography
             component="h1"
             sx={{
@@ -52,6 +49,7 @@ export function ProductPageTemplate({ product }: ProductPageTemplateProps) {
               fontSize: { xs: '2rem', md: '2.75rem' },
               color: colors.white,
               mb: 1.5,
+              mt: product.statusBadge ? 0 : 0,
             }}
           >
             {product.name}
@@ -309,55 +307,25 @@ export function ProductPageTemplate({ product }: ProductPageTemplateProps) {
               </Section>
             )}
 
-          {/* 6a. Partner proof cards (SCF) */}
-          {product.partners && product.partners.length > 0 && (
-            <Section bg="light" id="partners">
-              <Container maxWidth="lg">
-                <SectionHeading
-                  eyebrow="Proof"
-                  title={sections.partnersTitle ?? sections.proofTitle}
-                  subtitle={sections.partnersSubtitle ?? sections.proofSubtitle}
-                />
-                <Box
-                  sx={{
-                    display: 'grid',
-                    gridTemplateColumns: {
-                      xs: '1fr',
-                      md: `repeat(${Math.min(product.partners.length, 3)}, 1fr)`,
-                    },
-                    gap: 3,
-                  }}
-                >
-                  {product.partners.map((partner) => (
-                    <PartnerCard key={partner.name} partner={partner} />
-                  ))}
-                </Box>
-              </Container>
-            </Section>
-          )}
+          {/* 6. Lightweight anonymized outcome (no named case studies / competitor tables) */}
+          {sections.proofTitle && product.id !== 'billiontech-lend' && (
+              <Section id="proof" bg="light">
+                <Container maxWidth="lg">
+                  <SectionHeading
+                    eyebrow="In production"
+                    title={sections.proofTitle}
+                    subtitle={sections.proofSubtitle}
+                  />
+                </Container>
+              </Section>
+            )}
 
-          {/* 6b. Single case study (when no partner grid) */}
-          {caseStudy && !(product.partners && product.partners.length > 0) && (
-            <Section id="proof" bg={product.competitiveTable ? 'white' : 'light'}>
-              <Container maxWidth="lg">
-                <SectionHeading
-                  eyebrow="Proof"
-                  title={sections.proofTitle}
-                  subtitle={sections.proofSubtitle}
-                />
-                <CaseStudyCard study={caseStudy} />
-              </Container>
-            </Section>
-          )}
-
-          {/* Compliance callout for Lend when no case study */}
-          {!caseStudy &&
-            !(product.partners && product.partners.length > 0) &&
-            product.id === 'billiontech-lend' && (
+          {/* Compliance callout for LOS */}
+          {product.id === 'billiontech-lend' && (
               <Section bg="light" id="proof">
                 <Container maxWidth="lg">
                   <SectionHeading
-                    eyebrow="Proof"
+                    eyebrow="In production"
                     title={sections.proofTitle}
                     subtitle={sections.proofSubtitle}
                   />
@@ -369,7 +337,10 @@ export function ProductPageTemplate({ product }: ProductPageTemplateProps) {
                     }}
                   >
                     {[
-                      { value: 'RBI DLD 2025', label: 'Compliance built into the LOS' },
+                      {
+                        value: "RBI's Digital Lending Guidelines",
+                        label: 'Compliance built into the LOS',
+                      },
                       { value: 'Self-hosted', label: 'Air-gap ready for regulated lenders' },
                       { value: 'Human control', label: 'Approval & disbursement stay with credit personnel' },
                     ].map((item) => (
@@ -402,23 +373,6 @@ export function ProductPageTemplate({ product }: ProductPageTemplateProps) {
                 </Container>
               </Section>
             )}
-
-          {/* 7. Competitive comparison (when present) */}
-          {product.competitiveTable && sections.compareTitle && (
-            <Section bg="light" id="compare">
-              <Container maxWidth="lg">
-                <SectionHeading
-                  eyebrow="Comparison"
-                  title={sections.compareTitle}
-                  subtitle={sections.compareSubtitle}
-                />
-                <CompetitiveTable
-                  columns={product.competitiveTable.columns}
-                  rows={product.competitiveTable.rows}
-                />
-              </Container>
-            </Section>
-          )}
 
           {/* CTA */}
           <CTASection heading={sections.ctaHeading} subheading={sections.ctaSubheading} />

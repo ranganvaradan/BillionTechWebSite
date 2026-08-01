@@ -107,7 +107,7 @@ export const products: Product[] = [
     shortName: 'P2P',
     tagline: 'From RFQ to payment in hours, not days.',
     oneLiner: 'Procure-to-Pay — 6 AI agents, RFQ to payment in hours',
-    statusBadge: '3 Paying Pilots',
+    statusBadge: '',
     route: '/products/flow-p2p',
     platform: 'flow',
     buyerPersona: 'CPO / Head of Procurement',
@@ -142,7 +142,7 @@ export const products: Product[] = [
       {
         title: 'Global P2P suites were not built for India',
         description:
-          'SAP Ariba, Zycus, and Coupa do not support job-work / sub-contractor traceability for India’s manufacturing ecosystem. Adapting them costs years and crores.',
+          'Most enterprise P2P suites do not support job-work / sub-contractor traceability for India’s manufacturing ecosystem. Adapting them costs years and crores.',
       },
     ],
     workflowSteps: [
@@ -246,7 +246,6 @@ export const products: Product[] = [
         description: 'Full genealogy: finished good → raw material → supplier.',
       },
     ],
-    caseStudyRef: 'p2p-pilots',
     sections: {
       problemTitle: 'Why procure-to-pay still stalls',
       problemSubtitle: 'Primary buyer: CPO / Head of Procurement. Pain points Flow P2P is built to close.',
@@ -254,89 +253,19 @@ export const products: Product[] = [
       capabilitiesSubtitle:
         'Grouped from live P2P deployments — agents, match & pay, job-work genealogy, and mid-market deployment.',
       proofTitle: 'Live pilot outcomes',
-      proofSubtitle: 'Named programmes and reported metrics from the decks — no invented customers.',
+      proofSubtitle:
+        'In production with manufacturing and FMCG pilots — 80%+ invoices auto-matched and reported 50–70% faster procurement cycles.',
       ctaHeading: 'Ready to pilot Flow P2P?',
       ctaSubheading: '6–7 weeks. One measurable procurement outcome, agreed upfront.',
       heroCallout: {
         title: 'Signature differentiator',
-        body: "Job-work / sub-contractor traceability — a capability no global platform offers for India's manufacturing ecosystem. SAP Ariba, Zycus, and Coupa do not support job-work.",
+        body: "Job-work / sub-contractor traceability — a capability most global P2P suites do not offer for India's manufacturing ecosystem.",
       },
-      compareTitle: 'BillionTech P2P vs. SAP Ariba, Zycus Merlin, Coupa',
-      compareSubtitle:
-        'Sharpest wedge: job-work / sub-contractor traceability — none of the global suites support it for India.',
       aiTitle: 'Six AI agents',
       aiSubtitle:
         'Autonomous across the procure-to-pay cycle — always with human control on financial decisions.',
       guardrail:
         'Flow P2P agents draft, match, and route. PO approval, payment release, and every accounting entry remain with authorised procurement and finance personnel.',
-    },
-    competitiveTable: {
-      columns: ['BillionTech Flow P2P', 'SAP Ariba', 'Zycus Merlin', 'Coupa'],
-      rows: [
-        {
-          capability: 'Job-work / sub-contractor traceability',
-          billiontech: 'Yes — QR batch genealogy',
-          competitors: {
-            'SAP Ariba': 'No',
-            'Zycus Merlin': 'No',
-            Coupa: 'No',
-          },
-        },
-        {
-          capability: 'India manufacturing job-work support',
-          billiontech: 'Native — designed for the ecosystem',
-          competitors: {
-            'SAP Ariba': 'Not offered',
-            'Zycus Merlin': 'Not offered',
-            Coupa: 'Not offered',
-          },
-        },
-        {
-          capability: 'AI agents across RFQ → payment',
-          billiontech: '6 autonomous agents',
-          competitors: {
-            'SAP Ariba': '—',
-            'Zycus Merlin': '—',
-            Coupa: '—',
-          },
-        },
-        {
-          capability: 'Invoice / payment auto-match',
-          billiontech: '80%+ auto-matched',
-          competitors: {
-            'SAP Ariba': '—',
-            'Zycus Merlin': '—',
-            Coupa: '—',
-          },
-        },
-        {
-          capability: 'Typical deployment',
-          billiontech: '6–7 weeks',
-          competitors: {
-            'SAP Ariba': '12–18 months',
-            'Zycus Merlin': '—',
-            Coupa: '—',
-          },
-        },
-        {
-          capability: 'ERP changes required',
-          billiontech: 'None — ERP stays system of record',
-          competitors: {
-            'SAP Ariba': '—',
-            'Zycus Merlin': '—',
-            Coupa: '—',
-          },
-        },
-        {
-          capability: 'Relative cost',
-          billiontech: '~1/10th of SAP Ariba',
-          competitors: {
-            'SAP Ariba': '₹5–10 Cr/yr class',
-            'Zycus Merlin': '—',
-            Coupa: '—',
-          },
-        },
-      ],
     },
   },
   {
@@ -346,7 +275,7 @@ export const products: Product[] = [
     tagline:
       'From invoice to cash — automated. The interaction layer between your ERP and your distributor network.',
     oneLiner: 'Order-to-Cash — distributor portal, virtual account matching',
-    statusBadge: 'LIVE · TTK Prestige',
+    statusBadge: '',
     route: '/products/flow-o2c',
     platform: 'flow',
     buyerPersona: 'CFO / Finance Director',
@@ -448,7 +377,7 @@ export const products: Product[] = [
         title: 'Distributor self-service portal',
         items: [
           'Self-serve invoices and statements',
-          'Visibility across 3,500+ distributors (TTK Prestige network)',
+          'Visibility across 3,500+ distributors (manufacturer network)',
           'Reduced inbound finance queries',
           'Network-wide adoption without custom portals per dealer',
         ],
@@ -472,7 +401,6 @@ export const products: Product[] = [
         ],
       },
     ],
-    caseStudyRef: 'ttk-prestige',
     sections: {
       problemTitle: 'Why order-to-cash still stalls',
       problemSubtitle:
@@ -481,8 +409,9 @@ export const products: Product[] = [
         'Invoice generated in ERP → Distributor self-service portal → Payment via virtual account → Auto-allocation → Real-time reconciliation → Visibility & reporting',
       capabilitiesSubtitle:
         'Six capability groups — from ERP ingestion and virtual-account match through collections intelligence and dealer visibility.',
-      proofTitle: 'Live at TTK Prestige',
-      proofSubtitle: 'Full distributor network live — before/after from the decks.',
+      proofTitle: 'Live at scale',
+      proofSubtitle:
+        'In production with a leading kitchen appliances manufacturer’s 3,500+ distributor network — 80%+ payments auto-matched.',
       ctaHeading: 'Ready to pilot Flow O2C?',
       ctaSubheading: '6–7 weeks. One measurable cash-application outcome, agreed upfront.',
       heroCallout: {
@@ -498,7 +427,7 @@ export const products: Product[] = [
     tagline:
       'Embedded working capital for your dealer and distributor network. Finance at the point of transaction — not bolted on after.',
     oneLiner: 'Supply Chain Finance — embedded, multi-anchor, financier-neutral',
-    statusBadge: 'LIVE · 3 BFSI Anchors',
+    statusBadge: '',
     route: '/products/scf',
     platform: 'finance',
     buyerPersona: 'CFO / Head of Credit',
@@ -506,7 +435,7 @@ export const products: Product[] = [
       'Financier-neutral, multi-anchor',
       'Digital onboarding under 72 hrs',
       'Invoice upload & limit check',
-      'Live with Sundaram Finance, ICICI Bank, TATA Capital',
+      'Live with leading NBFCs and banks',
     ],
     statRow: [
       { value: '₹1,500 Cr+', label: 'Platform-Enabled Loans' },
@@ -580,7 +509,7 @@ export const products: Product[] = [
         items: [
           'Distributors choose their financier — no lock-in',
           'Multi-anchor programmes on one platform',
-          'Live with Sundaram Finance, ICICI Bank, TATA Capital',
+          'Live with leading NBFCs and banks',
           'Built for banks and NBFCs as equal participants',
         ],
       },
@@ -608,36 +537,10 @@ export const products: Product[] = [
           '₹1,500 Cr+ platform-enabled loans',
           '62,000+ invoices discounted',
           '25 active corporate programmes',
-          '5+ years in production (since FY2020 with Sundaram Finance)',
+          '5+ years in production (since FY2020 with exclusive SCF partner)',
         ],
       },
     ],
-    partners: [
-      {
-        name: 'Sundaram Finance',
-        badge: 'Exclusive partner',
-        detail:
-          'Exclusive SCF partner — production since FY2020 across corporate programmes and dealer networks.',
-        metrics: [
-          { value: '25', label: 'Corporate programmes' },
-          { value: '28+', label: 'Dealers' },
-          { value: 'FY2020', label: 'Live since' },
-        ],
-      },
-      {
-        name: 'ICICI Bank',
-        badge: 'Portfolio live',
-        detail: 'SCF portfolio live on the BillionTech platform.',
-        metrics: [{ value: 'LIVE', label: 'SCF portfolio' }],
-      },
-      {
-        name: 'TATA Capital',
-        badge: 'Portfolio live',
-        detail: 'SCF portfolio live on the BillionTech platform.',
-        metrics: [{ value: 'LIVE', label: 'SCF portfolio' }],
-      },
-    ],
-    caseStudyRef: 'sundaram-finance',
     sections: {
       problemTitle: 'Why channel finance still under-serves distributors',
       problemSubtitle:
@@ -645,30 +548,28 @@ export const products: Product[] = [
       workflowSubtitle:
         'Anchor programme setup → Digital distributor onboarding (under 72 hrs) → Invoice upload & limit check → Borrower acceptance → Lender sanction & disbursement → Repayment & closure',
       capabilitiesSubtitle:
-        'Financier-neutral programmes, fast MSME onboarding, and production scale with named BFSI anchors.',
+        'Financier-neutral programmes, fast MSME onboarding, and production scale with institutional anchors.',
       marketTitle: 'The market opportunity',
       marketSubtitle: 'India channel finance context from the decks — addressable market, MSME scale, and cost of status-quo overdraft.',
-      partnersTitle: 'Live BFSI anchors',
-      partnersSubtitle:
-        'Financier-neutral and multi-anchor — distributors choose their financier. Three named partners in production.',
       proofTitle: 'Institutional proof',
-      proofSubtitle: 'Sundaram Finance exclusive partnership detail — ICICI Bank and TATA Capital portfolios live.',
+      proofSubtitle:
+        'Exclusive SCF partnership with a leading NBFC since FY2020 — multi-anchor portfolios also live with a top 5 private sector bank and a leading diversified NBFC.',
       ctaHeading: 'Ready to scope an SCF programme?',
       ctaSubheading: '6–7 weeks. One measurable channel-finance outcome, agreed upfront.',
       heroCallout: {
         title: 'Financier-neutral · multi-anchor',
-        body: 'Distributors choose their financier — no lock-in. Currently live with Sundaram Finance (exclusive partner), ICICI Bank, and TATA Capital.',
+        body: 'Distributors choose their financier — no lock-in. Live with an exclusive SCF partner and multi-anchor portfolios at leading NBFCs and banks.',
       },
     },
   },
   {
     id: 'billiontech-lend',
-    name: 'BillionTech Lend',
+    name: 'Loan Origination System',
     shortName: 'Lend',
     tagline:
       'End-to-end digital lending — lead to disbursement — with AI credit intelligence that trains on your own historical loan data. Your portfolio. Your model. Your advantage.',
     oneLiner: 'LOS + AI credit intelligence, self-hosted',
-    statusBadge: 'RBI DLD 2025 Compliant',
+    statusBadge: '',
     route: '/products/billiontech-lend',
     platform: 'finance',
     buyerPersona: 'Head of Credit / CTO',
@@ -682,7 +583,7 @@ export const products: Product[] = [
       { value: '<48 hrs', label: 'Loan Processing Target' },
       { value: '~5 min', label: 'AI Credit Memo Draft' },
       { value: 'Daily', label: 'Portfolio Monitoring' },
-      { value: '100%', label: 'RBI DLD 2025 Compliant' },
+      { value: '100%', label: "RBI's Digital Lending Guidelines Aligned" },
     ],
     problemCards: [
       {
@@ -703,7 +604,7 @@ export const products: Product[] = [
       {
         title: 'Compliance and hosting constraints',
         description:
-          'RBI DLD 2025 and air-gap requirements rule out many SaaS LOS options. BillionTech Lend is self-hosted and compliance-ready by design.',
+          "RBI's Digital Lending Guidelines and air-gap requirements rule out many SaaS LOS options. Loan Origination System is self-hosted and compliance-ready by design.",
       },
     ],
     workflowSteps: [
@@ -750,7 +651,7 @@ export const products: Product[] = [
           'Kanban pipeline for credit operations',
           'Digital KYC: Aadhaar OTP, PAN, GSTIN, Video KYC, Account Aggregator, eSign',
           'Configurable workflow engine',
-          'RBI DLD 2025 compliance built-in',
+          "RBI's Digital Lending Guidelines compliance built-in",
           'Self-hosted / air-gap-ready',
         ],
       },
@@ -786,7 +687,7 @@ export const products: Product[] = [
           'Aadhaar OTP, PAN, GSTIN',
           'Video KYC and eSign',
           'Account Aggregator integration',
-          '100% RBI DLD 2025 compliant',
+          "100% aligned with RBI's Digital Lending Guidelines",
         ],
       },
       {
@@ -824,12 +725,12 @@ export const products: Product[] = [
       riskSubtitle:
         'Illustrative capability view — score 0.00–1.00 with Approve / Refer / Decline and confidence. Not a live underwriting decision.',
       proofTitle: 'Built for regulated lenders',
-      proofSubtitle: 'RBI DLD 2025 compliance, self-hosted deployment, and human control over every financial decision.',
-      ctaHeading: 'Ready to pilot BillionTech Lend?',
+      proofSubtitle: "RBI's Digital Lending Guidelines alignment, self-hosted deployment, and human control over every financial decision.",
+      ctaHeading: 'Ready to pilot Loan Origination System?',
       ctaSubheading: '6–7 weeks. One measurable lending outcome, agreed upfront.',
       heroCallout: {
         title: 'Your portfolio. Your model. Your advantage.',
-        body: 'AI credit intelligence trains on your own historical loan data — paired with a full digital LOS that is self-hosted and RBI DLD 2025 compliant.',
+        body: "AI credit intelligence trains on your own historical loan data — paired with a full digital LOS that is self-hosted and aligned with RBI's Digital Lending Guidelines.",
       },
       guardrail:
         'AI-LOS analyses, scores, and drafts. Final approval, disbursement, and every accounting entry remain with authorised credit personnel.',

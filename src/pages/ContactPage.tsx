@@ -1,4 +1,5 @@
 import { Box, Container, Link, Stack, Typography } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import { companyContact } from '@/data/company';
 import { ContactForm } from '@/components/shared/ContactForm';
 import { Section, SectionHeading } from '@/components/shared/SectionHeading';
@@ -29,8 +30,8 @@ export function ContactPage() {
             Contact
           </Typography>
           <Typography sx={{ color: 'rgba(255,255,255,0.78)', maxWidth: 640, fontSize: '1.1rem' }}>
-            Request a demo or talk to us about a scoped pilot. Form validates client-side; no live
-            backend submission in v1.
+            Request a demo or talk to us about a scoped pilot. Use the form or write to our general
+            inbox — form validates client-side; no live backend submission in v1.
           </Typography>
         </Container>
       </Section>
@@ -45,11 +46,7 @@ export function ContactPage() {
               alignItems: 'start',
             }}
           >
-            <Box
-              sx={{
-                p: { xs: 0, md: 0 },
-              }}
-            >
+            <Box>
               <ContactForm />
             </Box>
 
@@ -61,22 +58,17 @@ export function ContactPage() {
               }}
             >
               <SectionHeading
-                eyebrow="Direct"
-                title="Leadership contact"
-                subtitle="From our current enterprise proposal materials."
+                eyebrow="Inbox"
+                title="General contact"
+                subtitle="Public website inquiries — use the form or email below."
               />
               <Stack spacing={1.25}>
-                <Typography sx={{ fontWeight: 700 }}>{companyContact.name}</Typography>
-                <Typography variant="body2" sx={{ color: colors.gray500 }}>
-                  {companyContact.title}
-                </Typography>
                 <Typography variant="body2">
-                  <Link href={`tel:${companyContact.phone.replace(/\s/g, '')}`} underline="hover" color="inherit">
-                    {companyContact.phone}
-                  </Link>
-                </Typography>
-                <Typography variant="body2">
-                  <Link href={`mailto:${companyContact.email}`} underline="hover" sx={{ color: colors.primaryHover }}>
+                  <Link
+                    href={`mailto:${companyContact.email}`}
+                    underline="hover"
+                    sx={{ color: colors.primaryHover, fontWeight: 600 }}
+                  >
                     {companyContact.email}
                   </Link>
                 </Typography>
@@ -90,6 +82,13 @@ export function ContactPage() {
                   >
                     billiontech.ai
                   </Link>
+                </Typography>
+                <Typography variant="body2" sx={{ color: colors.gray700, pt: 1 }}>
+                  Prefer a guided intro?{' '}
+                  <Link component={RouterLink} to="/contact?intent=demo" underline="hover" sx={{ color: colors.primaryHover }}>
+                    Request a demo
+                  </Link>
+                  .
                 </Typography>
               </Stack>
             </Box>

@@ -1,6 +1,6 @@
 /**
- * Leadership team — sourced from BillionTech_BigBasket_Proposal_v2.pptx (slide 12).
- * Contact line from slide 13.
+ * Company page content — leadership bios, public contact, security notes, principles.
+ * Do not reintroduce client-proposal–sourced volume figures here.
  */
 export interface TeamMember {
   name: string;
@@ -42,25 +42,14 @@ export const teamMembers: TeamMember[] = [
 ];
 
 export const companyContact = {
-  name: 'Rangan Varadan',
-  title: 'Co-founder & Director',
-  phone: '+91 99801 30240',
-  email: 'rangan@billiontech.ai',
+  name: 'BillionTech',
+  title: 'General inquiries',
+  phone: '',
+  email: 'hello@billiontech.ai',
   website: 'https://billiontech.ai',
 } as const;
 
-/** Platform scale — BigBasket proposal slide 11 (figures as at July 2026). */
-export const platformScale = [
-  { value: '₹5,785 Cr', label: 'Total value processed' },
-  { value: '7,01,000+', label: 'Invoices processed' },
-  { value: '47,000+', label: 'Invoices in a single month' },
-  { value: '5 Years', label: 'In live production' },
-] as const;
-
-export const platformScaleNote =
-  'Figures as at July 2026, based on live platform transaction records (BigBasket proposal deck).';
-
-/** Security posture stated openly in BigBasket proposal slide 7 — not a completed badge claim. */
+/** Security posture — stated transparently (SOC 2 in progress, not a completed badge). */
 export const securityNotes = [
   {
     title: 'SOC 2 — certification in progress',
@@ -98,6 +87,6 @@ export const aboutPrinciples = [
   {
     title: 'India-ready architecture',
     detail:
-      'Job-work, GST, RBI DLD 2025, Account Aggregator, and channel-finance realities are designed in — not bolted on later.',
+      "Job-work, GST, RBI's Digital Lending Guidelines, Account Aggregator, and channel-finance realities are designed in — not bolted on later.",
   },
 ] as const;

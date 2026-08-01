@@ -174,17 +174,19 @@ export function MegaMenu({ active = false }: MegaMenuProps) {
                               >
                                 {item.name}
                               </Typography>
-                              <Chip
-                                label={item.statusBadge}
-                                size="small"
-                                sx={{
-                                  height: 20,
-                                  fontSize: '0.65rem',
-                                  fontWeight: 600,
-                                  backgroundColor: colors.primaryLight,
-                                  color: colors.gray900,
-                                }}
-                              />
+                              {item.statusBadge ? (
+                                <Chip
+                                  label={item.statusBadge}
+                                  size="small"
+                                  sx={{
+                                    height: 20,
+                                    fontSize: '0.65rem',
+                                    fontWeight: 600,
+                                    backgroundColor: colors.primaryLight,
+                                    color: colors.gray900,
+                                  }}
+                                />
+                              ) : null}
                             </Stack>
                             <Typography variant="body2" sx={{ color: colors.gray500, fontSize: '0.8rem' }}>
                               {item.oneLiner}

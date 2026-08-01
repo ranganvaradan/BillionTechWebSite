@@ -1,12 +1,12 @@
 import { Box, Container, Link, Stack, Typography } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import {
   aboutPrinciples,
   companyContact,
-  platformScale,
-  platformScaleNote,
   securityNotes,
   teamMembers,
 } from '@/data/company';
+import { approvedProductionStats } from '@/data/navigation';
 import { CTASection } from '@/components/shared/CTASection';
 import { Section, SectionHeading } from '@/components/shared/SectionHeading';
 import { StatRow } from '@/components/shared/StatRow';
@@ -37,7 +37,7 @@ export function AboutPage() {
             About BillionTech
           </Typography>
           <Typography sx={{ color: 'rgba(255,255,255,0.78)', maxWidth: 680, fontSize: '1.1rem' }}>
-            The operating system for India&apos;s supply chain and lending — four integrated products,
+            The Operating System for Enterprise Supply Chains — four integrated products,
             production-proven controls, and a leadership team with deep BFSI and enterprise experience.
           </Typography>
         </Container>
@@ -83,12 +83,9 @@ export function AboutPage() {
           <SectionHeading
             eyebrow="Scale"
             title="Not a first deployment"
-            subtitle={platformScaleNote}
+            subtitle="The same production figures used on the homepage, Credentials, and platform pages — not a first-deployment story."
           />
-          <StatRow stats={[...platformScale]} />
-          <Typography variant="body2" sx={{ color: colors.gray500, mt: 2 }}>
-            Trailing 12-month figures from the same source: ₹2,550 Cr run rate · 4,28,000+ invoices.
-          </Typography>
+          <StatRow stats={[...approvedProductionStats]} />
         </Container>
       </Section>
 
@@ -165,17 +162,12 @@ export function AboutPage() {
 
       <Section>
         <Container maxWidth="md">
-          <SectionHeading eyebrow="Contact" title="Talk to leadership" />
+          <SectionHeading
+            eyebrow="Contact"
+            title="Get in touch"
+            subtitle="Use our general inbox — leadership contact is not published on the public site."
+          />
           <Stack spacing={1}>
-            <Typography variant="h6">{companyContact.name}</Typography>
-            <Typography variant="body2" sx={{ color: colors.gray500 }}>
-              {companyContact.title}
-            </Typography>
-            <Typography variant="body1">
-              <Link href={`tel:${companyContact.phone.replace(/\s/g, '')}`} underline="hover" color="inherit">
-                {companyContact.phone}
-              </Link>
-            </Typography>
             <Typography variant="body1">
               <Link href={`mailto:${companyContact.email}`} underline="hover" sx={{ color: colors.primaryHover }}>
                 {companyContact.email}
@@ -185,6 +177,13 @@ export function AboutPage() {
               <Link href={companyContact.website} target="_blank" rel="noreferrer" underline="hover" sx={{ color: colors.primaryHover }}>
                 billiontech.ai
               </Link>
+            </Typography>
+            <Typography variant="body2" sx={{ color: colors.gray700, pt: 1 }}>
+              Or use the{' '}
+              <Link component={RouterLink} to="/contact" underline="hover" sx={{ color: colors.primaryHover }}>
+                contact form
+              </Link>
+              .
             </Typography>
           </Stack>
         </Container>

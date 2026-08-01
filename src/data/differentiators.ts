@@ -11,55 +11,41 @@ export const differentiators: Differentiator[] = [
     title: 'Deploys in 6–7 weeks — no ERP rework',
     summary: 'Live programmes without ripping out the system of record.',
     detail:
-      'BillionTech sits as the workflow and intelligence layer. ERP stays system of record — no multi-year ERP programme required to get P2P, O2C, SCF, or Lend into production.',
+      'BillionTech sits as the workflow and intelligence layer. ERP stays system of record — no multi-year ERP programme required to get P2P, O2C, SCF, or Loan Origination System into production.',
   },
   {
-    id: 'unplug-test',
-    title: 'AI that passes the "Unplug Test"',
-    summary: 'Disable AI and the platform stops functioning — AI is core, not a side panel.',
+    id: 'ai-native',
+    title: 'AI-Native by Design',
+    summary: 'Autonomous agents, matching, and credit intelligence are core — not bolt-on features.',
     detail:
-      'The Unplug Test is a named, ownable idea: if you turn AI off, autonomous agents, matching, and credit drafting stop. That is the opposite of bolt-on AI theatre.',
+      "AI isn't a feature bolted onto BillionTech Flow and BillionTech LEND after the fact — it's woven into how the platforms work from day one. Autonomous agents draft and match; credit intelligence scores and drafts memos; the platform's speed comes from that automation running continuously, not from a dashboard add-on. Every AI-assisted action still requires human approval before anything financial or operational is finalized.",
   },
   {
     id: 'lender-trained',
     title: 'Lender-trained credit model',
     summary: "Trains on the client's own historical loan data.",
     detail:
-      'AI-LOS is your portfolio advantage — risk scores, peer comparables, and credit memos grounded in your book, not a generic bureau-only model.',
+      'AI-LOS is your portfolio advantage — risk scores, peer comparables, and credit memos grounded in your book, not a generic bureau-only model. Built into the Loan Origination System product.',
   },
   {
-    id: 'institutional-proof',
-    title: 'Live institutional proof',
-    summary: 'Sundaram Finance, TTK Prestige, ICICI Bank, TATA Capital in production.',
+    id: 'aggregate-proof',
+    title: 'Aggregate production proof',
+    summary: '62,000+ invoices, ₹1,500 Cr+, 3,500+ distributors in live programmes.',
     detail:
-      'Named customers and programmes already running — exclusive SCF partnership with Sundaram Finance since FY2020, O2C live at TTK Prestige, and SCF portfolios with ICICI Bank and TATA Capital.',
+      'Production scale across SCF, O2C, and lending programmes — cumulative invoices discounted, platform-enabled loans, and distributor network volume already running in market.',
   },
   {
     id: 'india-ready',
     title: 'Built for India, not adapted for it',
-    summary: 'Job-work, GST, RBI DLD 2025, WhatsApp — designed for the market.',
+    summary: "Job-work, GST, RBI's Digital Lending Guidelines, WhatsApp — designed for the market.",
     detail:
-      'Job-work / sub-contractor traceability, GST-ready ops, RBI DLD 2025 compliance, and India channel realities are first-class — not localisation afterthoughts on a global suite.',
+      "Job-work / sub-contractor traceability, GST-ready ops, RBI's Digital Lending Guidelines alignment, and India channel realities are first-class — not localisation afterthoughts on a global suite.",
   },
   {
-    id: 'cost-vs-ariba',
-    title: '1/10th the cost of SAP Ariba',
-    summary: 'Mid-market pricing vs. multi-crore global suites and 12–18 month deployments.',
+    id: 'deployment-speed',
+    title: '6–7 weeks vs. 12–18 months',
+    summary: 'Mid-market deployment without multi-year ERP programmes.',
     detail:
-      'SAP Ariba-class programmes often run ₹5–10 Cr/yr and 12–18 months. BillionTech targets mid-market economics with 6–7 week deployment — without claiming feature parity on every enterprise suite module.',
+      'Enterprise suite programmes often run 12–18 months before value lands. BillionTech targets 6–7 week deployment with ERP as system of record — workflow and intelligence without a multi-crore rip-and-replace.',
   },
 ];
-
-export const aribaComparison = {
-  title: 'Deployment & cost framing vs. SAP Ariba',
-  rows: [
-    { label: 'Typical deployment', billiontech: '6–7 weeks', ariba: '12–18 months' },
-    { label: 'Relative cost', billiontech: '~1/10th of SAP Ariba', ariba: '₹5–10 Cr/yr class' },
-    { label: 'ERP changes', billiontech: 'None — ERP stays SoR', ariba: 'Often significant' },
-    {
-      label: 'India job-work / sub-con',
-      billiontech: 'Native (Flow P2P)',
-      ariba: 'Not offered',
-    },
-  ],
-} as const;

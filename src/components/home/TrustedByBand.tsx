@@ -1,23 +1,24 @@
 import { Box, Typography } from '@mui/material';
+import { clientDescriptors } from '@/data/clients';
 import { colors } from '@/theme/tokens';
 
-/** Real, verified customer names only — text wordmarks, not logo graphics. */
+/** Anonymized customer descriptors — text chips, not logo graphics. */
 export const trustedByNames = [
-  'TTK Prestige',
-  'Sundaram Finance',
-  'ICICI Bank',
-  'TATA Capital',
+  clientDescriptors.ttkPrestige,
+  clientDescriptors.sundaramFinance,
+  clientDescriptors.iciciBank,
+  clientDescriptors.tataCapital,
 ] as const;
 
 /**
- * Compact "Trusted by" band for the homepage — styled text chips, no fabricated logos.
+ * Compact band for the homepage — "Who We Work With" (descriptors, not named logos).
  */
 export function TrustedByBand() {
   return (
     <Box
       component="aside"
       id="trusted-by"
-      aria-label="Trusted by"
+      aria-label="Who we work with"
       sx={{
         backgroundColor: colors.white,
         borderBottom: `1px solid ${colors.gray200}`,
@@ -43,10 +44,10 @@ export function TrustedByBand() {
             textTransform: 'uppercase',
             color: colors.gray700,
             flexShrink: 0,
-            minWidth: { sm: 110 },
+            minWidth: { sm: 140 },
           }}
         >
-          Trusted by
+          Who We Work With
         </Typography>
         <Box
           sx={{
@@ -65,17 +66,17 @@ export function TrustedByBand() {
                 borderRadius: 1.5,
                 border: `1px solid ${colors.gray300}`,
                 backgroundColor: colors.gray50,
-                minWidth: { xs: 'calc(50% - 6px)', sm: 0 },
+                flex: { xs: '1 1 calc(50% - 6px)', md: '1 1 auto' },
                 textAlign: 'center',
               }}
             >
               <Typography
                 sx={{
-                  fontSize: { xs: '0.85rem', md: '0.9rem' },
+                  fontSize: { xs: '0.78rem', md: '0.85rem' },
                   fontWeight: 600,
                   color: colors.gray700,
                   letterSpacing: '0.01em',
-                  whiteSpace: 'nowrap',
+                  lineHeight: 1.35,
                 }}
               >
                 {name}
