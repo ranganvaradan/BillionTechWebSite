@@ -73,7 +73,8 @@ const report = {
   pageErrors,
   outDir,
   pass: {
-    hasTrustedBand: trustedNames.includes('TTK Prestige') && trustedNames.includes('TATA Capital'),
+    hasTrustedBand:
+      trustedNames.includes('Leading Kitchen') && trustedNames.includes('Leading Diversified NBFC'),
     threeTabs: tabLabels.length === 3,
     hasIllustrativeLabel: captions.some((c) => /Illustrative interface/i.test(c)),
     noConsoleErrors: consoleErrors.length === 0,
