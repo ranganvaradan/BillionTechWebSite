@@ -38,9 +38,16 @@ const personaTabs: PersonaTab[] = [
     mockup: (
       <Box
         sx={{
-          display: 'grid',
-          gridTemplateColumns: { xs: '1fr', md: '1fr' },
-          gap: 2,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 2.5,
+          width: '100%',
+          minWidth: 0,
+          '& > *': {
+            width: '100%',
+            maxWidth: '100%',
+            boxSizing: 'border-box',
+          },
         }}
       >
         <RfqPipelineMockup />
@@ -136,12 +143,12 @@ export function PersonaTabs() {
         aria-labelledby={`persona-tab-${active.id}`}
         sx={{
           display: 'grid',
-          gridTemplateColumns: { xs: '1fr', md: '0.95fr 1.05fr' },
+          gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
           gap: { xs: 3, md: 4 },
-          alignItems: 'start',
+          alignItems: { xs: 'stretch', md: 'start' },
         }}
       >
-        <Box>
+        <Box sx={{ minWidth: 0 }}>
           <Typography
             sx={{
               fontSize: '0.8rem',
@@ -221,7 +228,16 @@ export function PersonaTabs() {
           </Button>
         </Box>
 
-        <Box>{active.mockup}</Box>
+        <Box
+          sx={{
+            width: '100%',
+            minWidth: 0,
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          {active.mockup}
+        </Box>
       </Box>
     </Box>
   );

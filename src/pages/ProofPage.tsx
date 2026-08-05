@@ -29,8 +29,7 @@ export function ProofPage() {
             Credentials
           </Typography>
           <Typography sx={{ color: 'rgba(255,255,255,0.78)', maxWidth: 680, fontSize: '1.1rem' }}>
-            Consolidated production metrics from live programmes — the same figures used across the
-            homepage and platform pages, with anonymized institutional context.
+            Consolidated production metrics from live programmes.
           </Typography>
         </Container>
       </Section>

@@ -266,8 +266,9 @@ export function HomePage() {
           <Box
             sx={{
               display: 'grid',
-              gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: 'repeat(3, 1fr)' },
+              gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' },
               gap: 2.5,
+              alignItems: 'stretch',
             }}
           >
             {homepageProofDeployments.map((item) => (
@@ -277,6 +278,7 @@ export function HomePage() {
                   p: 3,
                   backgroundColor: colors.white,
                   borderTop: `2px solid ${colors.info}`,
+                  height: '100%',
                 }}
               >
                 <Typography variant="h6" sx={{ mb: 1, fontSize: '1.1rem' }}>

@@ -45,7 +45,7 @@ export const companyContact = {
   name: 'BillionTech',
   title: 'General inquiries',
   phone: '',
-  email: 'hello@billiontech.ai',
+  email: 'contact@billiontech.ai',
   website: 'https://billiontech.ai',
 } as const;
 

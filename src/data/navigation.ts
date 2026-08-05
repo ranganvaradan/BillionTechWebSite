@@ -180,8 +180,4 @@ export const homepageProofDeployments = [
     name: clientDescriptors.tataCapital,
     detail: 'SCF portfolio live',
   },
-  {
-    name: 'Manufacturing & FMCG P2P programmes',
-    detail: 'Paying pilots validating RFQ-to-payment with AI agents and job-work visibility',
-  },
 ] as const;

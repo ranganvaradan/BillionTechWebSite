@@ -51,10 +51,11 @@ export function TrustedByBand() {
         </Typography>
         <Box
           sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' },
             gap: 1.25,
             width: '100%',
+            alignItems: 'stretch',
           }}
         >
           {trustedByNames.map((name) => (
@@ -62,12 +63,15 @@ export function TrustedByBand() {
               key={name}
               sx={{
                 px: 2,
-                py: 1,
+                py: 1.25,
                 borderRadius: 1.5,
                 border: `1px solid ${colors.gray300}`,
                 backgroundColor: colors.gray50,
-                flex: { xs: '1 1 calc(50% - 6px)', md: '1 1 auto' },
                 textAlign: 'center',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minHeight: { sm: 52 },
               }}
             >
               <Typography

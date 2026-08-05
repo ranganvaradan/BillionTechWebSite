@@ -11,6 +11,6 @@ export const clientDescriptors = {
 
 /** Generic public inbox — no named leadership contact on the marketing site. */
 export const publicContact = {
-  email: 'hello@billiontech.ai',
+  email: 'contact@billiontech.ai',
   website: 'https://billiontech.ai',
 } as const;
